@@ -18,7 +18,6 @@ html {
     font-family: 'Winky Sans', sans-serif;
     color: rgb(0, 0, 0);
 }
-
 body {
     background-image:linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)), 
                      url(assets/body-background.jpg);
@@ -29,6 +28,33 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.space {
+    display: block;
+    margin: 5vw;
+}
+
+nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding: 0.5vw 3vw;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 1;
+} nav img {
+    height: 3vw;
+    width: auto;
+} nav h2 {
+    font-size: 1vw;
+    font-weight: 500;
+    margin: 0;
+    color: white;
 }
 
 .introduction {
@@ -43,12 +69,6 @@ body {
 
 .pfp-section {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 3vw;
-    gap: 1vw;
 } .pfp {
     border-radius: 50%;
     width: 25vw;
@@ -61,16 +81,13 @@ body {
     width: 25vw;
     height: 25vw;
     scale: 1.25;
-} #gumsa-logo {
-    width: 10.5vw;
-    height: 7vw;
-    margin-top: 2vw;
 }
 
 .manifesto-article {
-    margin: 0 2vw 1vw 2vw;
+    margin: 1vw 2vw;
     padding: 1vw 1vw;
     width: 100%;
+    overflow: hidden;
 } .manifesto-article h2 {
     font-size: 2.5vw;
     font-weight: 600;
@@ -87,7 +104,7 @@ body {
     top: 2vw;
     right: 0;
     transform-origin: top right;
-    transform: scale(60%) translate(10%, -8%);
+    transform: scale(90%) translate(10%, 1%); /* Left/right, up/down */
 }
 
 .q-and-a-container {
