@@ -18,13 +18,14 @@ html {
     font-family: 'Winky Sans', sans-serif;
     color: rgb(0, 0, 0);
 }
+
 body {
-    background-image:linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)), 
-                     url(assets/body-background.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)),
+        url(assets/body-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -47,10 +48,14 @@ nav {
     padding: 0.5vw 3vw;
     background-color: rgba(0, 0, 0, 0.50);
     z-index: 1;
-} nav img {
+}
+
+nav img {
     height: 3vw;
     width: auto;
-} nav h2 {
+}
+
+nav h2 {
     font-size: 1vw;
     font-weight: 500;
     margin: 0;
@@ -65,7 +70,7 @@ nav {
     align-items: center;
     gap: 4vw;
     background-color: whitesmoke;
-}    
+}
 
 .pfp-section {
     position: relative;
@@ -96,20 +101,24 @@ nav {
 } .manifesto-article p {
     font-weight: 300;
     z-index: 1;
-} br {
-    display: block;
-    margin: 0.25vw;
 } #manifesto-ne-border {
     position: absolute;
     top: 2vw;
     right: 0;
     transform-origin: top right;
     transform: scale(90%) translate(10%, 1%); /* Left/right, up/down */
+} #manifesto-s-border {
+    display: none;
 }
 
 .q-and-a-container {
-    margin: 4vh 5vw;
-} .q-and-a-container h1 {
+    margin: 2vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.q-and-a-container h1 {
     font-size: 3vw;
     font-weight: 500;
     text-align: center;
@@ -121,21 +130,91 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
 }
+
 .info-card {
     border-radius: 20px;
-    scale: 0.9;
+    transform: scale(1);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-} .info-card img {
+}
+
+.info-card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-} .info-card figcaption {
+}
+
+.info-card figcaption {
     position: absolute;
     z-index: 1;
     padding: 1vh 1vw;
     font-size: 2vw;
     font-weight: 400;
+}
+
+/* Style for Mobile */
+@media (max-width: 768px) {
+    nav img {
+        height: 5vh;
+        width: auto;
+    } nav h2 {
+        font-size: 2vh;
+    }
+
+    .space {
+        margin: 8vh;
+    }
+
+    .introduction {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pfp {
+        width: 30vh;
+        height: 30vh;
+    } #pfp-border {
+        width: 30vh;
+        height: 30vh;
+    }
+    
+    .manifesto-article {
+        padding-bottom: 2vh;
+    }
+    .manifesto-article h2 {
+        font-size: 4vh;
+        margin: 0.5vh;
+    } .manifesto-article p {
+        font-size: 1.5vh;
+        margin: 0;
+    } #manifesto-ne-border {
+        display: none;
+    } #manifesto-s-border {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+
+    .q-and-a-container {
+        margin-top: 5vh;
+        gap: 0;
+    }
+    .q-and-a-container h1 {
+        font-size: 3vh;
+        margin: 0 1vh;
+    }
+
+    .q-and-a {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info-card figcaption {
+        font-size: 3vh;
+    }
+    
+
 }
