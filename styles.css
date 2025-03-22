@@ -16,6 +16,7 @@
 
 html {
     font-family: 'Winky Sans', sans-serif;
+    color: rgb(0, 0, 0);
 }
 
 body {
@@ -25,4 +26,61 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.introduction {
+    margin: 4vh 5vw 8vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw;
+} .introduction img {
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+} 
+#manifesto-article {
+    padding: 2vw 3vw;
+    width: 100%;
+} #manifesto-article h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.q-and-a-container {
+    margin: 4vh 5vw;
+} .q-and-a-container h1 {
+    font-size: 3vw;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.q-and-a {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+.info-card {
+    border-radius: 20px;
+    scale: 0.9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} .info-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} .info-card figcaption {
+    position: absolute;
+    z-index: 1;
+    padding: 1vh 1vw;
+    font-size: 2vw;
+    font-weight: 400;
+    color: white;
 }
