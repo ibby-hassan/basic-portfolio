@@ -13,3 +13,16 @@
     font-style: italic;
     font-display: swap;
 }
+
+html {
+    font-family: 'Winky Sans', sans-serif;
+}
+
+body {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)), 
+                     url(assets/body-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
