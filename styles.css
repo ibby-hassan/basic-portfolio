@@ -31,24 +31,44 @@ body {
 }
 
 .introduction {
-    margin: 4vh 5vw 8vh 5vw;
+    margin: 6vh 5vw 8vh 5vw;
     display: flex;
     justify-content: space-between;
     gap: 4vw;
-} .introduction img {
+} 
+.pfp {
+    position: relative;
+} .pfp img {
     border-radius: 50%;
     width: 25vw;
     height: 25vw;
     object-fit: cover;
-} 
-#manifesto-article {
+} #pfp-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    scale: 1.25;
+}
+
+.manifesto-article {
     padding: 2vw 3vw;
     width: 100%;
-} #manifesto-article h2 {
+    position: relative;
+} .manifesto-article h2 {
     font-size: 3vw;
     font-weight: 600;
     padding: 0;
     margin: 0;
+} #manifesto-ne-border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    transform: scale(50%) translate(11%, -12%);
+
+    
 }
 
 .q-and-a-container {
