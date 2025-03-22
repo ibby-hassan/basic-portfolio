@@ -116,6 +116,7 @@ nav h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    display: none; /* Currently hidden. */ 
 }
 
 .q-and-a-container h1 {
