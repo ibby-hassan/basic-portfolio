@@ -123,7 +123,6 @@ nav h2 {
     font-weight: 500;
     margin: 0;
 } .question-submission form {
-    font-size: 1vw;
     display: flex;
     align-items: center;
     width: 70vw;
@@ -142,7 +141,7 @@ nav h2 {
 } .question-submission form button {
     flex: 0 0 7.5%;
     height: 2.5vw;
-    background-color: rgb(92, 198, 0);
+    background-color: rgb(84, 179, 148);
     color: white;
 }
 
@@ -182,6 +181,10 @@ nav h2 {
     font-weight: 400;
 }
 
+#scroll-icon {
+    display: none;
+}
+
 /* Style for Mobile */
 @media (max-width: 768px) {
     nav img {
@@ -216,7 +219,7 @@ nav h2 {
         font-size: 4vh;
         margin: 0.5vh;
     } .manifesto-article p {
-        font-size: 1.5vh;
+        font-size: 1.75vh;
         margin: 0;
     } #manifesto-ne-border {
         display: none;
@@ -227,22 +230,52 @@ nav h2 {
         left: 50%;
     }
 
-    .q-and-a-container {
-        margin-top: 5vh;
-        gap: 0;
-    }
-    .q-and-a-container h1 {
-        font-size: 3vh;
-        margin: 0 1vh;
+    .question-submission {
+        margin: 7vh 0;
+        background-color: whitesmoke;
+        padding: 1vh 4vh;
+        flex-direction: column;
+        gap: 1vh;
+    } .question-submission h2 {
+        font-size: 3.5vh;
+    } .question-submission form {
+        flex-direction: column;
+        gap: 1.5vh;
+    } .question-submission form * {
+        flex: none;
+        font-size: 2vh;
+        font-family: 'Winky Sans', sans-serif;
+        padding: 0.5vw;
+        border-radius: 5px;
+        width: 100%;
+    } #question {
+        flex: none;
+        height: 10vh;
+    } .question-submission form button {
+        width: 75%;
+        background-color: rgb(84, 179, 148);
+        color: white;
     }
 
     .q-and-a {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
     .info-card figcaption {
-        font-size: 3vh;
+        font-size: auto;
     }
     
+    #scroll-icon {
+        display: block;
+        height: 4vh;
+        width: 4vh;
+        padding: 1.5vh;;
+        position: fixed;
+        bottom: 2vh;
+        right: 2vh;
+        background-color: rgb(84, 179, 148);
+        border-radius: 50%;
+    } #scroll-icon:hover {
+        cursor: pointer;
+    }
 
 }
