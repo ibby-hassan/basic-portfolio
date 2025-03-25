@@ -50,39 +50,51 @@
             </article>
         </section>
 
-        <main class="q-and-a-container">
-            <h1>About Me + Q&A!</h1>
-            <div class="q-and-a">
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-    
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-    
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-    
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-    
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-    
-                <figure class="info-card">
-                    <img src="assets/card-background.jpg" alt="card thumbnail">
-                    <figcaption>CARD INFO GOES HERE</figcaption>
-                </figure>
-            </div>
+        <main>
+            <section class="question-submission">
+                <h2>Ask a Question</h2>
+                <form action="https://formsubmit.co/ibrahim.hassan2402@gmail.com" method="POST">
+                    <input type="text" name="name" id="name" required minlength="3" placeholder="Name">
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                    <textarea name="question" id="question" required minlength="10" placeholder="Your Question"></textarea>
+                    <input type="hidden" name="_subject" value="New Question from GUMSA Candidate Page">
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+            <section class="answer-section" style="display: none;">
+                <div class="q-and-a">
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+        
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+        
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+        
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+        
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+        
+                    <figure class="info-card">
+                        <img src="assets/card-background.jpg" alt="card thumbnail">
+                        <figcaption>CARD INFO GOES HERE</figcaption>
+                    </figure>
+                </div>
+            </section>
         </main>
     </body>
 </html>
