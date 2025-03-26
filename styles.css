@@ -31,6 +31,10 @@ body {
     overflow-x: hidden;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .space {
     display: block;
     margin: 5vw;
@@ -100,6 +104,7 @@ nav h2 {
     margin: 0;
 } .manifesto-article p {
     font-weight: 300;
+    font-size: 1vw;
     z-index: 1;
 } #manifesto-ne-border {
     position: absolute;
@@ -143,15 +148,8 @@ nav h2 {
     height: 2.5vw;
     background-color: rgb(84, 179, 148);
     color: white;
-}
-
-
-.answer-section h2 {
-    font-size: 3vw;
-    font-weight: 500;
-    margin: 0;
-    padding: 1vw 4vw;
-    text-align: center;
+} .question-submission form button:hover {
+    cursor: pointer;
 }
 
 .q-and-a {
@@ -160,29 +158,78 @@ nav h2 {
 }
 
 .info-card {
-    border-radius: 20px;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-card img {
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+} .info-card:hover {
+    cursor: pointer;
+}.info-card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.info-card figcaption {
+} .info-card h3 {
     position: absolute;
-    z-index: 1;
-    padding: 1vh 1vw;
-    font-size: 2vw;
+    top: 0;
+    padding: 1vw;
+    margin: 0;
+    background-color: rgb(84, 179, 148);
+    width: 100%;
+    height: fit-content;
+    color: white;
     font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 1vw;
+} .info-card figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2vw;
 }
 
 #scroll-icon {
     display: none;
+} #scroll-icon:hover {
+    cursor: pointer;
+}
+
+.info-expansion {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;  
+} .info-expansion:hover {
+    cursor: pointer;
+} .info-expansion-content-section {
+    width: 75%;        
+    height: fit-content;
+    max-height: 90vh;
+    background-image: url(assets/card-background.jpg);
+    background-size: cover;
+    padding: 2vw;               
+    border-radius: 10px;   
+    z-index: 3;    
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+} .info-expansion-content-section:hover {
+    cursor: auto;
+} .info-expansion-content-section h1 {
+    font-size: 2vw;
+    margin: 0 0 1vw 0;
+    font-weight: 500;
+} .info-expansion-content-section p {
+    font-size: 1.25vw;
+    line-height: 1vw;
+    font-weight: 300;
 }
 
 /* Style for Mobile */
@@ -231,7 +278,7 @@ nav h2 {
     }
 
     .question-submission {
-        margin: 7vh 0;
+        margin: 5vh 0 1vh 0;
         background-color: whitesmoke;
         padding: 1vh 4vh;
         flex-direction: column;
@@ -260,22 +307,42 @@ nav h2 {
     .q-and-a {
         grid-template-columns: repeat(2, 1fr);
     }
-    .info-card figcaption {
-        font-size: auto;
+
+    .info-card {
+        margin: 1vh;
+    } .info-card h3 {
+        padding: 1vh;
+        font-size: 2vh;
+        line-height: 1.5vh;
+    } .info-card figcaption {
+        font-size: 2.25vh;
     }
     
     #scroll-icon {
         display: block;
-        height: 4vh;
-        width: 4vh;
+        height: 3.5vh;
+        width: 3.5vh;
         padding: 1.5vh;;
         position: fixed;
         bottom: 2vh;
         right: 2vh;
         background-color: rgb(84, 179, 148);
         border-radius: 50%;
+        border: 1px solid white;
     } #scroll-icon:hover {
         cursor: pointer;
+    }
+
+    .info-expansion-content-section {
+        text-align: center;
+        min-height: 30vh;
+        padding: 2vh;
+    } .info-expansion-content-section h1 {
+        font-size: 2.5vh;
+        font-weight: 500;
+    } .info-expansion-content-section p {
+        font-size: 2vh;
+        line-height: 1.5vh;
     }
 
 }
