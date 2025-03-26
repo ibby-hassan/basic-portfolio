@@ -100,6 +100,7 @@ nav h2 {
     margin: 0;
 } .manifesto-article p {
     font-weight: 300;
+    font-size: 1vw;
     z-index: 1;
 } #manifesto-ne-border {
     position: absolute;
@@ -145,44 +146,49 @@ nav h2 {
     color: white;
 }
 
-
-.answer-section h2 {
-    font-size: 3vw;
-    font-weight: 500;
-    margin: 0;
-    padding: 1vw 4vw;
-    text-align: center;
-}
-
 .q-and-a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
 }
 
 .info-card {
-    border-radius: 20px;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-card img {
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+} .info-card:hover {
+    cursor: pointer;
+}.info-card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.info-card figcaption {
+} .info-card h3 {
     position: absolute;
-    z-index: 1;
-    padding: 1vh 1vw;
-    font-size: 2vw;
+    top: 0;
+    padding: 1vw;
+    margin: 0;
+    background-color: rgb(84, 179, 148);
+    width: 100%;
+    color: white;
     font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 1vw;
+} .info-card figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2vw;
 }
 
 #scroll-icon {
     display: none;
+} #scroll-icon:hover {
+    cursor: pointer;
 }
 
 /* Style for Mobile */
