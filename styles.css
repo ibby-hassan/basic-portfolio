@@ -144,12 +144,13 @@ nav h2 {
     height: 2.5vw;
     background-color: rgb(84, 179, 148);
     color: white;
+} .question-submission form button:hover {
+    cursor: pointer;
 }
 
 .q-and-a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
 }
 
 .info-card {
@@ -172,6 +173,7 @@ nav h2 {
     margin: 0;
     background-color: rgb(84, 179, 148);
     width: 100%;
+    height: fit-content;
     color: white;
     font-weight: 400;
     font-size: 1.25vw;
@@ -237,7 +239,7 @@ nav h2 {
     }
 
     .question-submission {
-        margin: 7vh 0;
+        margin: 5vh 0 1vh 0;
         background-color: whitesmoke;
         padding: 1vh 4vh;
         flex-direction: column;
@@ -266,20 +268,28 @@ nav h2 {
     .q-and-a {
         grid-template-columns: repeat(2, 1fr);
     }
-    .info-card figcaption {
-        font-size: auto;
+
+    .info-card {
+        margin: 1vh;
+    } .info-card h3 {
+        padding: 1vh;
+        font-size: 2vh;
+        line-height: 1.5vh;
+    } .info-card figcaption {
+        font-size: 2.25vh;
     }
     
     #scroll-icon {
         display: block;
-        height: 4vh;
-        width: 4vh;
+        height: 3.5vh;
+        width: 3.5vh;
         padding: 1.5vh;;
         position: fixed;
         bottom: 2vh;
         right: 2vh;
         background-color: rgb(84, 179, 148);
         border-radius: 50%;
+        border: 1px solid white;
     } #scroll-icon:hover {
         cursor: pointer;
     }
