@@ -26,6 +26,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-clip: border-box;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -154,7 +155,8 @@ nav h2 {
 
 .q-and-a {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
 }
 
 .info-card {
@@ -164,12 +166,13 @@ nav h2 {
     position: relative;
     border-radius: 15px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+    background-image: url(assets/card-background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 25vw;
+    width: 90%;
 } .info-card:hover {
     cursor: pointer;
-}.info-card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 } .info-card h3 {
     position: absolute;
     top: 0;
@@ -189,6 +192,7 @@ nav h2 {
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2vw;
+    width: 100%
 }
 
 #scroll-icon {
@@ -197,7 +201,7 @@ nav h2 {
     cursor: pointer;
 }
 
-.info-expansion {
+.info-overlay {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.75);
@@ -205,12 +209,12 @@ nav h2 {
     top: 0;
     left: 0;
     z-index: 2;
-    display: flex;              
+    display: none;              
     justify-content: center;    
     align-items: center;  
-} .info-expansion:hover {
+} .info-overlay:hover {
     cursor: pointer;
-} .info-expansion-content-section {
+} .info-overlay-content-section {
     width: 75%;        
     height: fit-content;
     max-height: 90vh;
@@ -220,15 +224,14 @@ nav h2 {
     border-radius: 10px;   
     z-index: 3;    
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
-} .info-expansion-content-section:hover {
+} .info-overlay-content-section:hover {
     cursor: auto;
-} .info-expansion-content-section h1 {
+} .info-overlay-content-section h1 {
     font-size: 2vw;
     margin: 0 0 1vw 0;
     font-weight: 500;
-} .info-expansion-content-section p {
+} .info-overlay-content-section p {
     font-size: 1.25vw;
-    line-height: 1vw;
     font-weight: 300;
 }
 
@@ -306,10 +309,12 @@ nav h2 {
 
     .q-and-a {
         grid-template-columns: repeat(2, 1fr);
+        
     }
 
     .info-card {
-        margin: 1vh;
+        margin: 0;
+        min-height: 30vh;
     } .info-card h3 {
         padding: 1vh;
         font-size: 2vh;
@@ -333,16 +338,15 @@ nav h2 {
         cursor: pointer;
     }
 
-    .info-expansion-content-section {
+    .info-overlay-content-section {
         text-align: center;
         min-height: 30vh;
         padding: 2vh;
-    } .info-expansion-content-section h1 {
+    } .info-overlay-content-section h1 {
         font-size: 2.5vh;
         font-weight: 500;
-    } .info-expansion-content-section p {
+    } .info-overlay-content-section p {
         font-size: 2vh;
-        line-height: 1.5vh;
-    }
+    } 
 
 }

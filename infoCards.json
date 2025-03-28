@@ -1,0 +1,13 @@
+[
+    {
+      "id": "q-who-am-i",
+      "question": "Who am I?",
+      "answer": "Salaam!<br> I'm Ibrahim, I just turned 23, and I'll be entering my 4th year of Computing Science. I've been involved with GUMSA since first year, but you may also know me from the Student Listener's team, or seen me around on Reach Out shifts. If we haven't had the pleasure of meeting yet, I'm looking forward to it!"
+    },
+    {
+        "id": "q-relevant-experience",
+        "question": "What ISOC experience do you have?",
+        "answer": "Alhamdulillah, I've been around!<br> In 1st year, I was Charity Week Lead, a role which later became Charity Officer.<br> In 2nd, I was Vice President.<br> After a year out, this year I've been Internal General Secretary."
+    }
+  ]
+  
