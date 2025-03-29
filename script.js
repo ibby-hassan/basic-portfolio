@@ -2,6 +2,7 @@ const overlay = document.querySelector('.info-overlay');
 const overlayTitle = document.getElementById('info-overlay-title');
 const overlayText = document.getElementById('info-overlay-text');
 const body = document.querySelector('body');
+const overlayGoBack = document.getElementById('overlay-go-back');
 
 const scrollIcon = document.getElementById("scroll-icon");
 const questionSection = document.querySelector(".question-submission");
@@ -9,7 +10,15 @@ scrollIcon.addEventListener("click", function() {
     questionSection.scrollIntoView({ behavior: "smooth" });
 });
 
-overlay.addEventListener('click', hideOverlay);
+overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+        hideOverlay();
+    }
+});
+
+overlayGoBack.addEventListener('click', function() {
+    hideOverlay();
+});
 
 fetch('./infoCards.json').then(response => {
     if (!response.ok) {
