@@ -1,0 +1,25 @@
+[
+    {
+      "id": "q-who-am-i",
+      "question": "Who am I?",
+      "answer": "Salaam!<br> I'm Ibrahim, I just turned 23, and I'll be entering my 4th year of Computing Science. I've been involved with GUMSA since first year, but you may also know me from the Student Listener's team, or seen me around on Reach Out shifts. If we haven't had the pleasure of meeting yet, I'm looking forward to it!"
+    },
+    {
+        "id": "q-relevant-experience",
+        "question": "What ISOC experience do you have?",
+        "answer": "Alhamdulillah, I've been around!<br> In 1st year, I was Charity Week Lead, a role which later became Charity Officer.<br> In 2nd, I was Vice President.<br> After a year out, this year I've been blessed to serve as Internal General Secretary."
+    },
+    {
+      "id": "q-why-are-you-running",
+      "author": "Humza U",
+      "question":"Why are you running for President?",
+      "answer":"If one has the capacity for good, I view it as one's moral obligation to try and do so.<br>I try abide by this philosophy wherever possible, and I feel unique experiences from my GUMSA tenure alongside my training and experience in public service roles within the uni, give me such a capacity for good.<br>I feel, therefore, that it is my duty to let myself be an option for the community to elect."
+    },
+    {
+      "id": "q-what-will-you-do",
+      "author": "Humza U",
+      "question":"What will you do as President?",
+      "answer":"There are two matters relevant in our community presently, which I hope to focus attention towards.<br><br>The first is global affairs/social justice. GUMSA has many, many intellectual figures within its network. I hope to utilise our resources to prioritise education: facilitating dialogue on current events from the arms trade to climate change to global humanitarian crises.<br>One implementation of this would be a Topic of the Week - focussing fundraising, social media, and halaqah themes on these events.<br><br>The second matter is the onset of new faces within the community, and providing opportunities to get involved so they can take on the mantle.<br>To this end, I would like to open event planning and committee discourse to interested volunteers and members."
+   }
+  ]
+  
