@@ -326,6 +326,7 @@ nav h2 {
 
     .info-card {
         margin: 0;
+        margin-botton: 1vh;
         min-height: 30vh;
     } .info-card h3 {
         padding: 1vh;
