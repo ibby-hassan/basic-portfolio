@@ -252,15 +252,11 @@ nav h2 {
         font-size: 2vh;
     }
 
-    .space {
-        margin: 8vh;
-    }
-
     .introduction {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin: 0, 0, 5vh, 0;
+        margin: 5vh, 0, 3vh, 0;
     }
 
     .pfp {
@@ -274,7 +270,7 @@ nav h2 {
     .manifesto-article {
         padding-bottom: 2vh;
     }
-    .manifesto-article summary {
+    .manifesto-article h1 {
         font-size: 3vh;
         margin: 0.5vh;
     } .manifesto-article p {
