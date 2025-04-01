@@ -264,6 +264,7 @@ nav h2 {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        margin: 0, 0, 5vh, 0;
     }
 
     .pfp {
@@ -293,7 +294,7 @@ nav h2 {
     }
 
     .question-submission {
-        margin: 5vh 0 1vh 0;
+        margin: 5vh 0 5vh 0;
         background-color: whitesmoke;
         padding: 1vh 4vh;
         flex-direction: column;
@@ -321,12 +322,11 @@ nav h2 {
 
     .q-and-a {
         grid-template-columns: repeat(2, 1fr);
-        
+        row-gap: 2vh;
     }
 
     .info-card {
         margin: 0;
-        margin-botton: 1vh;
         min-height: 30vh;
     } .info-card h3 {
         padding: 1vh;
