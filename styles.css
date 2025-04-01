@@ -36,11 +36,6 @@ body {
     overflow: hidden;
 }
 
-.space {
-    display: block;
-    margin: 5vw;
-}
-
 nav {
     box-sizing: border-box;
     display: flex;
@@ -68,7 +63,7 @@ nav h2 {
 }
 
 .introduction {
-    margin: 3vw 0 4vw 0;
+    margin: 4vw 0 2vw 0;
     padding: 0 4vw;
     display: flex;
     justify-content: space-between;
@@ -98,7 +93,7 @@ nav h2 {
     padding: 1vw 1vw;
     width: 100%;
     overflow: hidden;
-} .manifesto-article summary {
+} .manifesto-article h1 {
     display: block;
     font-size: 2.5vw;
     font-weight: 600;
