@@ -63,7 +63,7 @@ nav h2 {
 }
 
 .introduction {
-    margin: 4vw 0 2vw 0;
+    margin: 5vw 0 3vw 0;
     padding: 0 4vw;
     display: flex;
     justify-content: space-between;
@@ -256,7 +256,7 @@ nav h2 {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin: 5vh, 0, 3vh, 0;
+        margin: 7vh, 0, 7vh, 0;
     }
 
     .pfp {
