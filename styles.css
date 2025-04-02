@@ -112,7 +112,7 @@ nav h2 {
 }
 
 .question-submission {
-    margin: 3vw 0;
+    margin: 3vw 0 2vw 0;
     background-color: whitesmoke;
     padding: 1vw 4vw;
     display: flex;
@@ -187,7 +187,7 @@ nav h2 {
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2vw;
-    width: 100%
+    width: 95%
 } 
 
 #scroll-icon {
@@ -326,6 +326,21 @@ nav h2 {
         line-height: 1.5vh;
     } .info-card figcaption {
         font-size: 2.25vh;
+    } .info-overlay-content-section {
+        text-align: center;
+        min-height: 30vh;
+        padding: 2.5vh;
+    } .info-overlay-content-section h1 {
+        font-size: 2.25vh;
+        font-weight: 500;
+    } .info-overlay-content-section p {
+        font-size: 1.75vh;
+    } .info-overlay-content-section img {
+        height: 2vh;
+        width: auto;
+        padding: 1vh;
+        top: -0.5vh;
+        right: -0.5vh;
     }
     
     #scroll-icon {
@@ -342,19 +357,4 @@ nav h2 {
     } #scroll-icon:hover {
         cursor: pointer;
     }
-
-    .info-overlay-content-section {
-        text-align: center;
-        min-height: 30vh;
-        padding: 2vh;
-    } .info-overlay-content-section h1 {
-        font-size: 2.25vh;
-        font-weight: 500;
-    } .info-overlay-content-section p {
-        font-size: 1.75vh;
-    } .info-overlay-content-section img {
-    height: 2vh;
-    width: auto;
-    padding: 1vh;
-
 }
