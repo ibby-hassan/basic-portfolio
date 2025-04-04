@@ -43,6 +43,16 @@ function createCard(card) {
     figure.classList.add('info-card');
     figure.id = card.id; 
 
+    if (card.background) {
+        figure.style.backgroundImage = `url(assets/${card.background})`;
+    }
+    if (card.fontColour) {
+        figure.style.color = card.fontColour;
+    }
+    if (card.fontWeight) {
+        figure.style.fontWeight = card.fontWeight;
+    }
+
     const h3 = document.createElement('h3');
     h3.innerHTML = card.author ? `${card.author} asks...` : "General Info";
 
