@@ -221,23 +221,34 @@ nav {
 } .info-overlay:hover {
     cursor: pointer;
 } .info-overlay-content-section {
-    width: 75%;        
-    height: fit-content;
-    max-height: 90vh;
+    width: 75%;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
     background-image: url(assets/card-background.jpg);
     background-size: cover;
-    padding: 2vw;               
-    border-radius: 10px;   
-    z-index: 3;    
+    padding: 2vw;
+    border-radius: 10px;
+    z-index: 3;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
     position: relative;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) grey;
+} .info-overlay-content-section::-webkit-scrollbar {
+    width: 6px;
+} .info-overlay-content-section::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    border: 2px solid transparent;
 } .info-overlay-content-section:hover {
     cursor: auto;
 } .info-overlay-content-section h1 {
     font-size: 2vw;
     margin: 0 0 1vw 0;
     font-weight: 500;
-} .info-overlay-content-section p {
+}.info-overlay-content-section p {
     font-size: 1.25vw;
     font-weight: 300;
 } .info-overlay-content-section img {
@@ -365,12 +376,13 @@ nav {
         font-size: 2.25vh;
     } .info-overlay-content-section {
         text-align: center;
+        max-height: 60vh;
         padding: 2.5vh;
     } .info-overlay-content-section h1 {
-        font-size: 2.25vh;
+        font-size: 2.5vh;
         font-weight: 500;
     } .info-overlay-content-section p {
-        font-size: 1.75vh;
+        font-size: 2vh;
     } .info-overlay-content-section img {
         height: 2vh;
         width: auto;

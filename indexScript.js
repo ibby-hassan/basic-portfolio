@@ -58,18 +58,18 @@ function createCard(card) {
     h3.innerHTML = card.author ? `${card.author} asks...` : "General Info";
 
     const figcaption = document.createElement('figcaption');
-    figcaption.innerHTML = card.question;
+    figcaption.innerHTML = card.questionOverride ? card.questionOverride : card.question;
 
     figure.appendChild(h3);
     figure.appendChild(figcaption);
-    figure.addEventListener('click', () => showOverlay(card.question, card.answer));
+    figure.addEventListener('click', () => showOverlay(card));
 
     return figure;
 };
 
-function showOverlay(question, answer) {
-    overlayTitle.innerHTML = question;
-    overlayText.innerHTML = answer;
+function showOverlay(card) {
+    overlayTitle.innerHTML = card.question;
+    overlayText.innerHTML = card.answer;
     overlay.style.display = "flex";
 
     const scrollbarWidth = getScrollbarWidth();
