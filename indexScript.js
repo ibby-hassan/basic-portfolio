@@ -6,6 +6,7 @@ const overlayGoBack = document.getElementById('overlay-go-back');
 
 const scrollIcon = document.getElementById("scroll-icon");
 const questionSection = document.querySelector(".question-submission");
+
 scrollIcon.addEventListener("click", function() {
     questionSection.scrollIntoView({ behavior: "smooth" });
 });

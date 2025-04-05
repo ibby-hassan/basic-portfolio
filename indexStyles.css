@@ -28,6 +28,7 @@ body {
     background-position: center;
     background-clip: border-box;
     margin: 0;
+    margin-top: 5vw;
     padding: 0;
     overflow-x: hidden;
 }
@@ -45,31 +46,63 @@ nav {
     left: 0;
     width: 100%;
     position: fixed;
-    padding: 0.5vw 3vw;
-    background-color: rgba(0, 0, 0, 0.50);
+    padding: 10px 3vw;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
-}
-
-nav img {
-    height: 3vw;
+} nav img {  
+    height: 4vw;
     width: auto;
-}
-
-nav h2 {
-    font-size: 1vw;
-    font-weight: 500;
-    margin: 0;
-    color: white;
-}
-
-.introduction {
-    margin: 5vw 0 3vw 0;
-    padding: 0 4vw;
+} nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4vw;
+    list-style: none;
+    justify-content: space-around;   
+    gap: 5vw;
+} nav ul li {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: white;
+} nav ul li:hover {
+    cursor: pointer;
+} nav a {
+    text-decoration: none;
+    color: white;
+} nav #hamburger-icon{
+    display: none;
+    height: 4vw;
+    width: auto;
+}
+
+.sidebar{
+    display: none;
+}
+
+/* Everything below this is index-page specific */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+} .heading h1 {
+    font-size: 2vw;
+    font-weight: 400;
+    margin: 2vw 0 0 0;
     background-color: whitesmoke;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.5vw 1vw;
+} .heading h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    margin: 0 0 1vw 0;
+    background-color: whitesmoke;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 1vw 0.5vw 1vw;
 }
 
 .pfp-section {
@@ -81,34 +114,11 @@ nav h2 {
     object-fit: cover;
 } #pfp-border {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25); 
     width: 25vw;
     height: 25vw;
-    scale: 1.25;
-}
-
-.manifesto-article {
-    margin: 1vw 2vw;
-    padding: 1vw 1vw;
-    width: 100%;
-    overflow: hidden;
-} .manifesto-article h1 {
-    display: block;
-    font-size: 2.5vw;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-} .manifesto-article p {
-    font-weight: 300;
-    font-size: 1vw;
-    z-index: 1;
-} #manifesto-ne-border {
-    position: absolute;
-    top: 2vw;
-    right: 0;
-    transform-origin: top right;
-    transform: scale(1.2) translate(10%, -0%); /* Left/right, up/down */
 }
 
 .question-submission {
@@ -243,21 +253,54 @@ nav h2 {
     transform: scale(0.9);
 }
 
+
 /* Style for Mobile */
 @media (max-width: 768px) {
+    body {
+        margin-top: 8vh;
+    }
+     
     nav img {
         height: 5vh;
         width: auto;
-    } nav h2 {
-        font-size: 2vh;
+    } nav .nav-links {
+        display: none;
+    } nav #hamburger-icon {
+        display: block;
+        height: 5vh;
+        width: auto;
+    } nav #hamburger-icon:hover {
+        cursor: pointer;
+    } 
+
+    .sidebar {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        gap: 5vh;
+        position: fixed;
+        top: calc(5vh + 25px);
+        right: -100%;
+        height: 100vh;
+        width: 40vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5vh 2vh;
+        transition: right 0.3s ease;
+        z-index: 5;
+        list-style: none;
+    } .sidebar li a {
+        font-size: 3vh;
+        color: white;
+        padding: 2vh 0;
+        text-decoration: none;
+    } .sidebar.show {
+        right: 0;
     }
 
-    .introduction {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin: 7vh, 0, 7vh, 0;
-    }
+    /* Everything below this is index-page specific */
 
     .pfp {
         width: 30vh;
@@ -266,23 +309,17 @@ nav h2 {
         width: 30vh;
         height: 30vh;
     }
-    
-    .manifesto-article {
-        padding-bottom: 2vh;
-    }
-    .manifesto-article h1 {
+
+    .heading {
+        padding: 0 2vh;
+        margin: 2vh 0;
+    } .heading h1 {
         font-size: 3vh;
-        margin: 0.5vh;
-    } .manifesto-article p {
-        font-size: 1.75vh;
-        margin: 0;
-    } #manifesto-ne-border {
-        display: none;
-    } #manifesto-s-border {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
+        margin: 3vh 0 0;
+        padding: 0.5vh 1vh;
+    } .heading h2 {
+        font-size: 4vh;
+        padding: 0 1vh 0.5vh 1vh;
     }
 
     .question-submission {
@@ -328,7 +365,6 @@ nav h2 {
         font-size: 2.25vh;
     } .info-overlay-content-section {
         text-align: center;
-        min-height: 30vh;
         padding: 2.5vh;
     } .info-overlay-content-section h1 {
         font-size: 2.25vh;
