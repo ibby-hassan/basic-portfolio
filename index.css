@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'Winky Sans';
+    src: url(assets/Winky_Sans/WinkySans-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Winky Sans';
+    src: url(assets/Winky_Sans/WinkySans-Italic-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 300 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --gumsa-green: rgb(84, 179, 148);
+}
+
+html {
+    font-family: 'Winky Sans', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)),
+        url(assets/body-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-clip: border-box;
+    margin: 0;
+    margin-top: 5vw;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding: 10px 3vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+} nav img {  
+    height: 4vw;
+    width: auto;
+} nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;   
+    gap: 5vw;
+} nav ul li {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: white;
+} nav ul li:hover {
+    cursor: pointer;
+} nav a {
+    text-decoration: none;
+    color: white;
+} nav #hamburger-icon{
+    display: none;
+    height: 4vw;
+    width: auto;
+}
+
+.sidebar{
+    display: none;
+}
+
+/* Everything below this is index-page specific */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+} .heading h1 {
+    font-size: 2vw;
+    font-weight: 400;
+    margin: 2vw 0 0 0;
+    background-color: whitesmoke;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.5vw 1vw;
+} .heading h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    margin: 0 0 1vw 0;
+    background-color: whitesmoke;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 1vw 0.5vw 1vw;
+}
+
+.pfp-section {
+    position: relative;
+} .pfp {
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+} #pfp-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25); 
+    width: 25vw;
+    height: 25vw;
+}
+
+.question-submission {
+    margin: 3vw 0 2vw 0;
+    background-color: whitesmoke;
+    padding: 1vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} .question-submission h2 {
+    font-size: 3vw;
+    font-weight: 500;
+    margin: 0;
+} .question-submission form {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    justify-content: space-between;
+} .question-submission form * {
+    font-size: 1vw;
+    font-family: 'Winky Sans', sans-serif;
+    padding: 0.5vw;
+    border-radius: 5px;
+} #name {
+    flex: 0 0 5%;
+} #email {
+    flex: 0 0 20%;
+} #question {
+    flex: 0 0 40%;
+} .question-submission form button {
+    flex: 0 0 7.5%;
+    height: 2.5vw;
+    background-color: rgb(84, 179, 148);
+    color: white;
+} .question-submission form button:hover {
+    cursor: pointer;
+}
+
+.q-and-a {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.info-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+    background-image: url(assets/card-background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 25vw;
+    width: 90%;
+} .info-card:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+} .info-card h3 {
+    position: absolute;
+    top: 0;
+    padding: 1vw;
+    margin: 0;
+    background-color: rgb(84, 179, 148);
+    width: 100%;
+    height: fit-content;
+    color: white;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 1vw;
+} .info-card figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2vw;
+    width: 95%
+} 
+
+#scroll-icon {
+    display: none;
+    z-index: 1;
+} #scroll-icon:hover {
+    cursor: pointer;
+}
+
+.info-overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;              
+    justify-content: center;    
+    align-items: center;  
+} .info-overlay:hover {
+    cursor: pointer;
+} .info-overlay-content-section {
+    width: 75%;
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    background-image: url(assets/card-background.jpg);
+    background-size: cover;
+    padding: 2vw;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) grey;
+} .info-overlay-content-section::-webkit-scrollbar {
+    width: 6px;
+} .info-overlay-content-section::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    border: 2px solid transparent;
+} .info-overlay-content-section:hover {
+    cursor: auto;
+} .info-overlay-content-section h1 {
+    font-size: 1.75vw;
+    margin: 0 0 1vw 0;
+    font-weight: 500;
+}.info-overlay-content-section p {
+    font-size: 1.25vw;
+    font-weight: 300;
+} .info-overlay-content-section img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2vw;
+    width: auto;
+    padding: 1vw;
+} .info-overlay-content-section img:hover {
+    cursor: pointer;
+}  .info-overlay-content-section img:active {
+    transform: scale(0.9);
+}
+
+
+/* Style for Mobile */
+@media (max-width: 768px) {
+    body {
+        margin-top: 8vh;
+    }
+     
+    nav img {
+        height: 5vh;
+        width: auto;
+    } nav .nav-links {
+        display: none;
+    } nav #hamburger-icon {
+        display: block;
+        height: 5vh;
+        width: auto;
+    } nav #hamburger-icon:hover {
+        cursor: pointer;
+    } 
+
+    .sidebar {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        gap: 5vh;
+        position: fixed;
+        top: calc(5vh + 25px);
+        right: -100%;
+        height: 100vh;
+        width: 40vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5vh 2vh;
+        transition: right 0.3s ease;
+        z-index: 5;
+        list-style: none;
+    } .sidebar li a {
+        font-size: 3vh;
+        color: white;
+        padding: 2vh 0;
+        text-decoration: none;
+    } .sidebar.show {
+        right: 0;
+    }
+
+    /* Everything below this is index-page specific */
+
+    .pfp {
+        width: 30vh;
+        height: 30vh;
+    } #pfp-border {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .heading {
+        padding: 0 2vh;
+        margin: 2vh 0;
+    } .heading h1 {
+        font-size: 3vh;
+        margin: 3vh 0 0;
+        padding: 0.5vh 1vh;
+    } .heading h2 {
+        font-size: 4vh;
+        padding: 0 1vh 0.5vh 1vh;
+    }
+
+    .question-submission {
+        margin: 5vh 0 5vh 0;
+        background-color: whitesmoke;
+        padding: 1vh 4vh;
+        flex-direction: column;
+        gap: 1vh;
+    } .question-submission h2 {
+        font-size: 3.5vh;
+    } .question-submission form {
+        flex-direction: column;
+        gap: 1.5vh;
+    } .question-submission form * {
+        flex: none;
+        font-size: 2vh;
+        font-family: 'Winky Sans', sans-serif;
+        padding: 0.5vw;
+        border-radius: 5px;
+        width: 100%;
+    } #question {
+        flex: none;
+        height: 10vh;
+    } .question-submission form button {
+        width: 75%;
+        background-color: rgb(84, 179, 148);
+        color: white;
+    }
+
+    .q-and-a {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2vh;
+    }
+
+    .info-card {
+        margin: 0;
+        min-height: 30vh;
+    } .info-card h3 {
+        padding: 1vh;
+        font-size: 2vh;
+        line-height: 1.5vh;
+    } .info-card figcaption {
+        font-size: 2.25vh;
+    } .info-overlay-content-section {
+        text-align: center;
+        max-height: 60vh;
+        padding: 2.5vh;
+    } .info-overlay-content-section h1 {
+        font-size: 2.5vh;
+        font-weight: 500;
+    } .info-overlay-content-section p {
+        font-size: 2vh;
+    } .info-overlay-content-section img {
+        height: 2vh;
+        width: auto;
+        padding: 1vh;
+        top: -0.5vh;
+        right: -0.5vh;
+    }
+    
+    #scroll-icon {
+        display: block;
+        height: 4vh;
+        width: 4vh;
+        padding: 1.5vh;
+        position: fixed;
+        bottom: 2vh;
+        right: 2vh;
+        background-color: rgb(84, 179, 148);
+        border-radius: 50%;
+        border: 1px solid white;
+    } #scroll-icon:hover {
+        cursor: pointer;
+    }
+}

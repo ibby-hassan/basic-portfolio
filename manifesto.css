@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Winky Sans';
+    src: url(assets/Winky_Sans/WinkySans-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Winky Sans';
+    src: url(assets/Winky_Sans/WinkySans-Italic-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 300 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Winky Sans', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)),
+        url(assets/body-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-clip: border-box;
+    margin: 0;
+    margin-top: 5vw;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding: 10px 3vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+} nav img {  
+    height: 4vw;
+    width: auto;
+} nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;   
+    gap: 5vw;
+} nav ul li {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: white;
+} nav ul li:hover {
+    cursor: pointer;
+} nav a {
+    text-decoration: none;
+    color: white;
+} nav #hamburger-icon{
+    display: none;
+    height: 4vw;
+    width: auto;
+}
+
+.sidebar{
+    display: none;
+}
+
+/* Everything below this is index-page specific */
+
+.manifesto {
+    margin: 1vw 0 3vw 0;
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+    background-color: whitesmoke;
+}
+
+.pfp-section {
+    position: relative;
+} .pfp {
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+} #pfp-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    scale: 1.25;
+}
+
+.manifesto-article {
+    margin: 1vw 2vw;
+    padding: 1vw 1vw;
+    width: 100%;
+    overflow: hidden;
+} .manifesto-article h1 {
+    display: block;
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+} .manifesto-article p {
+    font-weight: 300;
+    font-size: 1vw;
+    z-index: 1;
+} #manifesto-ne-border {
+    position: absolute;
+    top: 2vw;
+    right: 0;
+    transform-origin: top right;
+    transform: scale(1.2) translate(10%, -0%); /* Left/right, up/down */
+}
+
+/* Style for Mobile */
+@media (max-width: 768px) {
+    body {
+        margin-top: 8vh;
+    }
+     
+    nav img {
+        height: 5vh;
+        width: auto;
+    } nav .nav-links {
+        display: none;
+    } nav #hamburger-icon {
+        display: block;
+        height: 5vh;
+        width: auto;
+    } nav #hamburger-icon:hover {
+        cursor: pointer;
+    } 
+
+    .sidebar {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        gap: 5vh;
+        position: fixed;
+        top: calc(5vh + 25px);
+        right: -100%;
+        height: 100vh;
+        width: 40vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5vh 2vh;
+        transition: right 0.3s ease;
+        z-index: 5;
+        list-style: none;
+    } .sidebar li a {
+        font-size: 3vh;
+        color: white;
+        padding: 2vh 0;
+        text-decoration: none;
+    } .sidebar.show {
+        right: 0;
+    }
+
+    .manifesto {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 1vh, 0, 7vh, 0;
+    }
+
+    .pfp {
+        width: 30vh;
+        height: 30vh;
+    } #pfp-border {
+        width: 30vh;
+        height: 30vh;
+    }
+    
+    .manifesto-article {
+        padding-bottom: 2vh;
+    }
+    .manifesto-article h1 {
+        font-size: 3vh;
+        margin: 1vh;
+    } .manifesto-article p {
+        font-size: 2vh;
+        margin: 0;
+    } #manifesto-ne-border {
+        display: none;
+    } #manifesto-s-border {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}
