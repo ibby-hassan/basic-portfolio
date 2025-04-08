@@ -220,10 +220,11 @@ main {
     } .month-info {
         background-size: cover;
         width: 80vw;
+        padding: 1vh;
         border: 4px solid var(--gumsa-green);
     } .month-info li {
-        font-size: 2vh;
+        font-size: 2.15vh;
     } li.further-info {
-        font-size: 1.5vh;
+        font-size: 1.85vh;
     }
 }
